@@ -1,0 +1,21 @@
+# Labo 15 : configuration golangci-lint minimale (format v2).
+# Lancer : golangci-lint run ./...
+version: "2"
+
+linters:
+  # "standard" = errcheck, govet, ineffassign, staticcheck, unused.
+  default: standard
+  enable:
+    - unconvert  # conversions de type inutiles
+    - gosec      # quelques vérifications de sécurité (fichiers, exec, TLS)
+    # misspell n'est pas activé : il ne connaît que l'anglais, et nos
+    # commentaires sont en français (il voit "programme" comme une faute).
+  exclusions:
+    presets:
+      # errcheck ne signale plus fmt.Fprint*, les defer x.Close(), os.Remove :
+      # les cas où ignorer l'erreur est l'usage. Le reste reste signalé.
+      - std-error-handling
+
+formatters:
+  enable:
+    - gofmt

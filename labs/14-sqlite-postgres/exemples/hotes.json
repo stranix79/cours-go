@@ -1,0 +1,6 @@
+[
+  {"nom": "web-01", "ip": "10.0.0.11", "role": "web"},
+  {"nom": "web-02", "ip": "10.0.0.12", "role": "web"},
+  {"nom": "db-01", "ip": "10.0.0.21", "role": "db"},
+  {"nom": "bastion", "ip": "10.0.0.2", "role": "admin"}
+]

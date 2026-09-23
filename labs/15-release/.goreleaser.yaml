@@ -1,0 +1,54 @@
+# Labo 15 : configuration goreleaser minimale (format v2).
+# Répétition locale : goreleaser release --snapshot --clean   (produit dist/)
+# Vraie release      : git tag v1.0.0 && git push --tags && goreleaser release
+#                      (il faut un GITHUB_TOKEN ; la CI de GitHub en fournit un)
+version: 2
+
+project_name: diskexporter
+
+before:
+  hooks:
+    - go mod tidy
+
+builds:
+  - id: diskexporter
+    main: .
+    binary: diskexporter
+    env:
+      - CGO_ENABLED=0
+    flags:
+      - -trimpath
+    ldflags:
+      - -s -w -X main.version={{.Version}}
+    goos: [linux, darwin, windows]
+    goarch: [amd64, arm64]
+    ignore:
+      - goos: windows
+        goarch: arm64
+
+archives:
+  - id: default
+    formats: [tar.gz]
+    name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+    format_overrides:
+      - goos: windows
+        formats: [zip]
+    files:
+      - README.md
+
+checksum:
+  name_template: "checksums.txt"
+
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - "^docs:"
+      - "^chore:"
+      - "^test:"
+
+release:
+  github:
+    owner: stranix79
+    name: cours-go
+  draft: true

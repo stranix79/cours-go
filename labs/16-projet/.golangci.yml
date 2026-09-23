@@ -1,0 +1,14 @@
+# Configuration minimale de golangci-lint v2 (chapitre 15) : les linters
+# standard, et errcheck qui ferme les yeux sur les cas où ignorer l'erreur est
+# volontaire (un Close en defer, une écriture dans un http.ResponseWriter).
+version: "2"
+linters:
+  default: standard
+  settings:
+    errcheck:
+      exclude-functions:
+        - fmt.Fprintf
+        - fmt.Fprintln
+        - (*os.File).Close
+        - (io.ReadCloser).Close
+        - (net.Listener).Close

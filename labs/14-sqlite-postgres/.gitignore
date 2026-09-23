@@ -1,0 +1,5 @@
+# base SQLite créée par `go run .` (jamais commitée)
+*.db
+*.db-journal
+*.db-wal
+*.db-shm

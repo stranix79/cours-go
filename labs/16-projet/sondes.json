@@ -1,0 +1,11 @@
+{
+  "ecoute": ":8080",
+  "intervalle": "5s",
+  "timeout": "2s",
+  "workers": 4,
+  "cibles": [
+    {"nom": "web-local", "type": "http", "url": "http://127.0.0.1:8000/"},
+    {"nom": "ssh-local", "type": "tcp", "adresse": "127.0.0.1:22"},
+    {"nom": "postgres-local", "type": "tcp", "adresse": "127.0.0.1:5432"}
+  ]
+}

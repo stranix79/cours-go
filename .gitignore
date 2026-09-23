@@ -1,0 +1,6 @@
+# binaires produits par les labos
+labs/*/hello*
+labs/**/*.exe
+*.test
+*.out
+.DS_Store

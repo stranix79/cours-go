@@ -7,6 +7,8 @@ stranix · le renard qui aime savoir ce qui se passe sous le capot
 $ cat cours-go/README.md
 ```
 
+Un cours en français, par **Gilles Fauvie** ([stranix.net](https://stranix.net)).
+
 Tu as déjà codé. Du C, du Python, un peu de Java. Tu fais tourner des serveurs, des bases de données, des conteneurs, du monitoring. Et tu as remarqué que les outils que tu utilises tous les jours, Docker, Kubernetes, Prometheus, Terraform, Grafana Loki, Caddy, sont tous écrits dans le même langage. Ce n'est pas un hasard.
 
 Ce dépôt est un cours **qui part de zéro en Go** mais pas de zéro en programmation. Chaque notion est comparée à ce que tu connais (C, Python), et chaque chapitre répond d'abord à la question que tu te poses vraiment : *pourquoi c'est comme ça, et dans quel cas je m'en sers ?* Le chapitre 0 est entièrement consacré à « quand utiliser Go, et quand ne pas l'utiliser ».
@@ -70,6 +72,21 @@ go run ./solution               # la version corrigée, commentée
 Parce que les cours Go en français s'arrêtent à `fmt.Println`, et que la documentation officielle, excellente, suppose que tu sais déjà pourquoi tu es là. Ici, on commence par le pourquoi, on compare à ce que tu connais, et on va jusqu'au bout : un service qui tourne en production, dans un conteneur, avec ses métriques.
 
 Licence MIT. Le cours est vivant : une erreur, une question, une idée de labo, ouvre une issue. On en parle aussi sur [stranix.net](https://stranix.net).
+
+## Du même auteur
+
+Les autres cours, même esprit :
+
+- [cours-python](https://github.com/stranix79/cours-python) : Python de zéro à FastAPI, même format, même public.
+- [asm-m1](https://github.com/stranix79/asm-m1) : l'assembleur ARM64 sur Mac Apple Silicon, pour voir ce qu'il y a sous le capot.
+
+Et le reste :
+
+- [stranix.net](https://stranix.net) : le blog, où l'on parle de ce genre de choses.
+- [Deckhand](https://deckhand.show) : des présentations HTML écrites en Markdown.
+- [Chutag](https://chutag.stranix.net) : des tags QR pour retrouver ses objets perdus (bêta).
+- [apps.stranix.net](https://apps.stranix.net) : les apps macOS de Stranix.
+- [CODE79](https://code79.com) : l'atelier devops derrière tout ça.
 
 ```
 $ ls /ventures

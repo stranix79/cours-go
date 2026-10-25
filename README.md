@@ -79,6 +79,7 @@ Les autres cours, même esprit :
 
 - [cours-python](https://github.com/stranix79/cours-python) : Python de zéro à FastAPI, même format, même public.
 - [asm-m1](https://github.com/stranix79/asm-m1) : l'assembleur ARM64 sur Mac Apple Silicon, pour voir ce qu'il y a sous le capot.
+- [cours-rust](https://github.com/stranix79/cours-rust) : Rust de zéro à la prod, même format, même public, avec un encadré « Venant de Go » à chaque notion.
 
 Et le reste :
 
@@ -90,5 +91,5 @@ Et le reste :
 
 ```
 $ ls /ventures
-asm-m1/    cours-python/    cours-go/    deckhand/
+asm-m1/    cours-python/    cours-go/    cours-rust/    deckhand/
 ```
